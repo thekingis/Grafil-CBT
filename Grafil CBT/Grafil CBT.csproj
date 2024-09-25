@@ -1,0 +1,46 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <OutputType>WinExe</OutputType>
+    <TargetFramework>net8.0-windows</TargetFramework>
+    <RootNamespace>Grafil_CBT</RootNamespace>
+    <Nullable>enable</Nullable>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <UseWPF>true</UseWPF>
+    <Platforms>AnyCPU;x86</Platforms>
+    <FileVersion>1.0.1</FileVersion>
+    <Version>1.0.1</Version>
+    <AssemblyVersion>1.0.1</AssemblyVersion>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Compile Remove="AssemblyInfo.cs" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Remove="app_bg.jpg" />
+    <None Remove="Images\app_bg.jpg" />
+    <None Remove="Images\l_bg.jpg" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="MySql.Data" Version="8.3.0" />
+    <PackageReference Include="Newtonsoft.Json" Version="13.0.3" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Resource Include="AssemblyInfo.cs" />
+    <Resource Include="Images\app_bg.jpg" />
+    <Resource Include="Images\l_bg.jpg" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Folder Include="Res\" />
+  </ItemGroup>
+
+	<ItemGroup>
+		<Folder Include="Assets\" />
+		<Resource Include="Assets/icon.ico" />
+	</ItemGroup>
+
+</Project>

@@ -1,0 +1,83 @@
+﻿<Window x:Class="Grafil_CBT.LoginWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Grafil_CBT"
+        mc:Ignorable="d"
+        Icon="/Assets/icon.ico"
+        Title="" Height="500" Width="350"
+        WindowStyle="None"
+        ResizeMode="NoResize"
+        Background="Purple"
+        WindowStartupLocation="CenterScreen">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="*" />
+            <RowDefinition Height="Auto" />
+        </Grid.RowDefinitions>
+        <StackPanel Orientation="Horizontal">
+            <StackPanel
+                Width="350"
+                VerticalAlignment="Center">
+                <TextBlock
+                    TextAlignment="Center"
+                    FontWeight="SemiBold"
+                    HorizontalAlignment="Center"
+                    Text="Candidate Login"
+                    Foreground="White"
+                    FontSize="40">
+                </TextBlock>
+                <StackPanel
+                    Margin="0 80 0 30">
+                    <TextBlock
+                        TextAlignment="Center"
+                        HorizontalAlignment="Center"
+                        Text="Registration ID"
+                        Foreground="White"
+                        FontSize="20"/>
+                    <TextBox 
+                        Width="300"
+                        Padding="10 "
+                        FontSize="17"
+                        x:Name="RegID">
+                        <TextBox.BorderBrush>
+                            <LinearGradientBrush StartPoint="0,0" EndPoint="1,1">
+                                <GradientStop Color="Green" Offset="0" />
+                                <GradientStop Color="GreenYellow" Offset="1.0" />
+                            </LinearGradientBrush>
+                        </TextBox.BorderBrush>
+                    </TextBox>
+                </StackPanel>
+                <Button
+                    Margin="20"
+                    Height="40"
+                    FontSize="17"
+                    Foreground="White"
+                    x:Name="LoginButton"
+                    Content="LOGIN"
+                    Cursor="Hand">
+                    <Button.Style>
+                        <Style TargetType="{x:Type Button}">
+                            <Setter Property="Background" Value="DarkGreen"/>
+                            <Setter Property="Template">
+                                <Setter.Value>
+                                    <ControlTemplate TargetType="{x:Type Button}">
+                                        <Border Background="{TemplateBinding Background}">
+                                            <ContentPresenter Margin="{TemplateBinding Padding}" HorizontalAlignment="Center" VerticalAlignment="Center"/>
+                                        </Border>
+                                    </ControlTemplate>
+                                </Setter.Value>
+                            </Setter>
+                            <Style.Triggers>
+                                <Trigger Property="IsMouseOver" Value="True">
+                                    <Setter Property="Background" Value="Green"/>
+                                </Trigger>
+                            </Style.Triggers>
+                        </Style>
+                    </Button.Style>
+                </Button>
+            </StackPanel>
+        </StackPanel>
+    </Grid>
+</Window>
